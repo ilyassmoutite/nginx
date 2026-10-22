@@ -1,5 +1,6 @@
 # Use the official lightweight NGINX Alpine image
-FROM nginxinc/nginx-unprivileged:alpine
+FROM nginx/nginx-unprivileged:alpine3.24-perl
+
 
 # (Optional) Remove the default NGINX website configuration
 RUN rm /etc/nginx/conf.d/default.conf
