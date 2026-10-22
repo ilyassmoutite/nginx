@@ -1,5 +1,5 @@
 # Use the official lightweight NGINX Alpine image
-FROM docker.io/library/nginx/nginx-unprivileged:alpine3.24-perl
+FROM docker.io/nginx/nginx-unprivileged:alpine3.24-perl
 
 
 # (Optional) Remove the default NGINX website configuration
