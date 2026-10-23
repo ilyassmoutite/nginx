@@ -26,12 +26,14 @@ RUN apt-get update && \
     apt-get install -y nginx && \
     rm -rf /var/lib/apt/lists/*
 
+RUN chown -R :0 /var/cache/nginx /var/log/nginx /var/lib/nginx /etc/nginx && \
+    chmod -R g+w /var/cache/nginx /var/log/nginx /var/lib/nginx /etc/nginx    
 # Copy configuration and static content
 COPY ./nginx.conf /etc/nginx/nginx.conf
 COPY ./html /var/www/html
 
 # Inform Docker that the container listens on port 80
-EXPOSE 80
+EXPOSE 8080
 
-# Start NGINX in the foreground so the Docker container remains running gteth
+# Start NGINX in the foreground so the Docker container remains running
 CMD ["nginx", "-g", "daemon off;"]
