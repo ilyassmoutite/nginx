@@ -33,5 +33,5 @@ COPY ./html /var/www/html
 # Inform Docker that the container listens on port 80
 EXPOSE 80
 
-# Start NGINX in the foreground so the Docker container remains running
+# Start NGINX in the foreground so the Docker container remains running gteth
 CMD ["nginx", "-g", "daemon off;"]
