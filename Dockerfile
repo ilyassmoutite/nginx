@@ -26,7 +26,7 @@ RUN apt-get update && \
     apt-get install -y nginx && \
     rm -rf /var/lib/apt/lists/*
 
-RUN chown -R :0 /var/cache/nginx /var/log/nginx /var/lib/nginx /etc/nginx && \
+RUN chown -R :0  /var/log/nginx /var/lib/nginx /etc/nginx && \
     chmod -R g+w  /var/log/nginx /var/lib/nginx /etc/nginx    
 # Copy configuration and static content
 COPY ./nginx.conf /etc/nginx/nginx.conf
