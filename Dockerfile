@@ -27,7 +27,7 @@ RUN apt-get update && \
     rm -rf /var/lib/apt/lists/*
 
 RUN chown -R :0 /var/cache/nginx /var/log/nginx /var/lib/nginx /etc/nginx && \
-    chmod -R g+w /var/cache/nginx /var/log/nginx /var/lib/nginx /etc/nginx    
+    chmod -R g+w  /var/log/nginx /var/lib/nginx /etc/nginx    
 # Copy configuration and static content
 COPY ./nginx.conf /etc/nginx/nginx.conf
 COPY ./html /var/www/html
