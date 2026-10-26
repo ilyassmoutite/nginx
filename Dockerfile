@@ -33,7 +33,7 @@ COPY ./nginx.conf /etc/nginx/nginx.conf
 COPY ./html /var/www/html
 
 # Inform Docker that the container listens on port 80
-EXPOSE 8080
+EXPOSE 80
 
 # Start NGINX in the foreground so the Docker container remains running
 CMD ["nginx", "-g", "daemon off;"]
